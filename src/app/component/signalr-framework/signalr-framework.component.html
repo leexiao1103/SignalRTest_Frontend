@@ -1,0 +1,16 @@
+<p>signalr-framework works!</p>
+
+<div>
+  <input placeholder="Name" [(ngModel)]="name" (keydown.enter)="sendMessage()"/>
+</div>
+<div>
+  <input placeholder="Message" [(ngModel)]="message" (keydown.enter)="sendMessage()"/>
+</div>
+
+<button (click)="sendMessage()">Send message</button>
+
+<p *ngFor="let m of messages">
+  {{m.name}}：{{m.message}}
+</p>
+
+<hr />
